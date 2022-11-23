@@ -6,24 +6,26 @@ class SongOverview extends Component {
   constructor() {
     super();
     this.state = {
-      songs: [],
-      artists: [],
-      genres: [],
-      ratings: [],
+      songs: ["f "],
+      artists: [" "],
+      genres: [" "],
+      ratings: [" "],
     };
+    this.addSong = this.addSong.bind(this);
   }
 
   addSong = (song) => {
-    this.setState(prevState => {
-            console.log("T");
-    })
+    // console.log("OK")
+    this.setState({
+      songs: song.target.value,
+    });
   };
 
   render() {
     return (
       <div>
         <SongForm addSong={this.addSong} />
-        <SongList songs={this.state.songs} />
+        <SongList addSong={this.addSong} />
       </div>
     );
   }
