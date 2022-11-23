@@ -7,7 +7,12 @@ function SongForm(props) {
         <thead>
           <tr className="song-header">
             <th className="song-row__item">
-              <input type="text" placeholder="Song..."></input>
+              <input
+                type="text"
+                value={props.songs}
+                name="songs"
+                placeholder="Song..."
+              ></input>
             </th>
             <th className="song-row__item">
               <input type="text" placeholder="Artist"></input>
@@ -21,7 +26,7 @@ function SongForm(props) {
           </tr>
         </thead>
       </table>
-      <button>Add Song</button>
+      <button onClick={props.addSong}>Add Song</button>
     </div>
   );
 }
