@@ -35,17 +35,16 @@ class SongOverview extends Component {
     });
   };
 
-
   render() {
     return (
       <div>
-        <SongForm 
-          addSong={this.addSong} 
-          addArtist={this.addArtist} 
-          addGenre={this.addGenre} 
-          addRating={this.addRating} 
-          />
-        <SongList 
+        <SongForm
+          addSong={this.addSong}
+          addArtist={this.addArtist}
+          addGenre={this.addGenre}
+          addRating={this.addRating}
+        />
+        <SongList
           songs={this.state.songs}
           artists={this.state.artists}
           genres={this.state.genres}
