@@ -19,7 +19,7 @@ function SongForm(props) {
                 value={props.songs}
                 name="songs"
                 placeholder="Song..."
-                onChange={props.addSong}
+                // onChange={props.addSong}
               ></input>
             </th>
 
@@ -29,7 +29,7 @@ function SongForm(props) {
                 value={props.artists}
                 name="artists"
                 placeholder="Artist..."
-                onChange={props.addArtist}
+                // onChange={props.addArtist}
               ></input>
             </th>
 
@@ -39,7 +39,7 @@ function SongForm(props) {
                 value={props.genres}
                 name="songs"
                 placeholder="Genres..."
-                onChange={props.addGenre}
+                // onChange={props.addGenre}
               ></input>
             </th>
 
@@ -49,13 +49,13 @@ function SongForm(props) {
                 value={props.ratings}
                 name="ratings"
                 placeholder="Rating..."
-                onChange={props.addRating}
+                // onChange={props.addRating}
               ></input>
             </th>
           </tr>
         </thead>
       </table>
-      <button onClick={props.addSong}>Add Song</button>
+      <button onClick={props.render}>Add Song</button>
 
       <h3 style={inline}>Song</h3>
       <h3 style={inline}>Artist</h3>
