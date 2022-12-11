@@ -1,69 +1,75 @@
-import React from "react";
+import React, { Component } from "react";
 
-// Inline h3
-const inline = {
-  display: "inline",
-  margin: 85,
-};
+class SongForm extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      artist: "",
+      genre: "",
+      rating: "",
+    };
+    this.addSong = this.addSong.bind(this);
+  }
 
-function SongForm(props) {
-  return (
-    <div>
-      <table style={{ width: "100%" }}>
-        <thead>
-          <tr className="song-header">
-            <th className="song-row__item">
-              
-              <input
-                type="text"
-                value={props.songs}
-                name="songs"
-                placeholder="Song..."
-                // onChange={props.addSong}
-              ></input>
-            </th>
+  addSong = (song) => {
+    // alert("Clicked")
 
-            <th className="song-row__item">
-              <input
-                type="text"
-                value={props.artists}
-                name="artists"
-                placeholder="Artist..."
-                // onChange={props.addArtist}
-              ></input>
-            </th>
+    this.setState({ songs: song.target.value });
+  };
 
-            <th className="song-row__item">
-              <input
-                type="text"
-                value={props.genres}
-                name="songs"
-                placeholder="Genres..."
-                // onChange={props.addGenre}
-              ></input>
-            </th>
+  render() {
+    return (
+      <div>
+        <table style={{ width: "100%" }}>
+          <thead>
+            <tr className="song-header">
+              <th className="song-row__item">
+                <input
+                  type="text"
+                  value={this.state.name}
+                  name="songs"
+                  placeholder="Song..."
+                  onChange={this.addSong}
+                ></input>
+              </th>
 
-            <th className="song-row__item">
-              <input
-                type="text"
-                value={props.ratings}
-                name="ratings"
-                placeholder="Rating..."
-                // onChange={props.addRating}
-              ></input>
-            </th>
-          </tr>
-        </thead>
-      </table>
-      <button onClick={props.render}>Add Song</button>
+              <th className="song-row__item">
+                <input
+                  type="text"
+                  value={this.state.artist}
+                  name="artists"
+                  placeholder="Artist..."
+                  onChange={this.state.artist}
+                ></input>
+              </th>
 
-      <h3 style={inline}>Song</h3>
-      <h3 style={inline}>Artist</h3>
-      <h3 style={inline}>Genre</h3>
-      <h3 style={inline}>Rating</h3>
+              <th className="song-row__item">
+                <input
+                  type="text"
+                  value={this.state.genre}
+                  name="songs"
+                  placeholder="Genres..."
+                  onChange={this.state.genre}
+                ></input>
+              </th>
 
-    </div>
-  );
+              <th className="song-row__item">
+                <input
+                  type="text"
+                  value={this.state.rating}
+                  name="ratings"
+                  placeholder="Rating..."
+                  onChange={this.state.rating}
+                ></input>
+              </th>
+            </tr>
+          </thead>
+        </table>
+        <button onClick={this.addSong}>Add Song</button>
+      </div>
+    );
+  }
 }
 
 export default SongForm;
