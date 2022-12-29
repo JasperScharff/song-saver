@@ -1,20 +1,21 @@
 import React from "react";
 
-const stylingForSongListDiv = {
-  fontSize: 20,
-  margin: 5,
-};
-
-const newRow = {
-  color: "green",
-  marginLeft: 150,
-  marginRight: 40,
-};
-
 function SongList(props) {
+  console.log("SongList: ", props.songs);
   return (
-    <div style={stylingForSongListDiv}>
-      <span style={newRow}>{props.songs}</span>
+    <div className="stylingForSongListDiv">
+      <div className="newRow">
+        {props.songs.map((song) => (
+          <div key={song.name}>
+            <span className="items">
+              <span>{song.name}</span> 
+              <span>{song.artist}</span>
+              <span>{song.genre}</span> 
+              <span>{song.rating}</span>
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -12,11 +12,12 @@ class SongOverview extends Component {
   }
 
   addSong = (song) => {
+    console.log("SongOverview", song)
     this.setState({
-      songs: song.target.value
+      songs: [...this.state.songs, song]
     });
   };
-
+  
   render() {
     return (
       <div>

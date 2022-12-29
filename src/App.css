@@ -2,4 +2,46 @@
     margin: 0;
     padding: 0;
 }
+/* .titles {
+    word-spacing: 20vw;
+    margin-top: 10px;
+} */
+
+.stylingForSongListDiv {
+    background-color: lightgreen;
+    font-size: 20px;
+    margin: 5px;
+}
+.stylingForSongListDiv:hover {
+    background-color: rgb(59, 124, 59);
+    transition: 200ms
+}
+
+.title {
+    font-size: xx-large;
+    margin-right: 15vw;
+}
+
+.items {
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    /* margin: 50px; */
+}
+.items span {
+    margin-right: 15vw;
+}
+.items:hover {
+    background-color: rgb(67, 172, 67);
+    cursor: pointer;
+    transition: 300ms;
+}
+
+input {
+    font-size: 20px;
+    margin: 35px 5vw 20px 0;
+}
+.song-row__item {
+    margin: 50px;
+}
 
