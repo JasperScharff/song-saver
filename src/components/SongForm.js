@@ -22,7 +22,7 @@ class SongForm extends Component {
   render() {
     return (
       <div>
-        <table style={{}}>
+        <table>
           <thead>
             <tr className="song-header">
               <th className="song-row__item">
@@ -67,13 +67,13 @@ class SongForm extends Component {
             </tr>
           </thead>
         </table>
-        <button onClick={() => this.props.addSong(this.state)}>Add Song</button>
-        <div>
-          <span className="title">Song</span>
-          <span className="title">Artist</span>
-          <span className="title">Genre</span>
-          <span className="title">Rating</span>
-        </div>
+        <button className="btn" onClick={() => this.props.addSong(this.state)}>Add Song</button>
+        <tr>
+          <th className="title">Song</th>
+          <th className="title">Artist</th>
+          <th className="title">Genre</th>
+          <th className="title">Rating</th>
+        </tr>
       </div>
     );
   }

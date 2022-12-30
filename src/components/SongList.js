@@ -7,12 +7,13 @@ function SongList(props) {
       <div className="newRow">
         {props.songs.map((song) => (
           <div key={song.name}>
-            <span className="items">
-              <span>{song.name}</span> 
-              <span>{song.artist}</span>
-              <span>{song.genre}</span> 
-              <span>{song.rating}</span>
-            </span>
+            <tr className="items">
+              <td className="songItem">{song.name}</td> 
+              <td className="songItem">{song.artist}</td>
+              <td className="songItem">{song.genre}</td> 
+              <td className="songItem">{song.rating}</td>
+                {/* {song.name} {song.artist} {song.genre} {song.rating} */}
+              </tr>
           </div>
         ))}
       </div>
